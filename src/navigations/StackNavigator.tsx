@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StackNavigatorParamsList, StackRoutes } from '_types';
 import React from 'react';
 
+import { ArtworkDetails } from '_screens';
 import BottomNavigator from './BottomNavigator';
 
 const Stack = createNativeStackNavigator<StackNavigatorParamsList>();
@@ -18,7 +19,10 @@ const StackNavigator = () => {
         name={StackRoutes.BottomRoutes}
         component={BottomNavigator}
       />
-      <Stack.Screen name={StackRoutes.ArtworkDetails} component={() => <></>} />
+      <Stack.Screen
+        name={StackRoutes.ArtworkDetails}
+        component={ArtworkDetails}
+      />
       <Stack.Screen name={StackRoutes.ArtistDetails} component={() => <></>} />
     </Stack.Navigator>
   );
