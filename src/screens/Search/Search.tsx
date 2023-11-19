@@ -17,7 +17,7 @@ import {
   StackNavigatorParamsList,
   StackRoutes,
 } from '_types';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
@@ -54,7 +54,6 @@ const Search = ({ navigation }: SearchProps) => {
     );
     const data = await response.json();
     const ids = data.data.map((artwork: ArtworkType) => artwork.id);
-    console.log('ids', ids);
     const artworksResponse = await fetch(
       `https://api.artic.edu/api/v1/artworks?page=${page}&limit=20&ids=${ids.join(
         ',',
@@ -63,10 +62,6 @@ const Search = ({ navigation }: SearchProps) => {
 
     return artworksResponse.json();
   };
-
-  useEffect(() => {
-    console.log('query', query);
-  }, [query]);
 
   const { data, isLoading, isFetching } = useQuery<ArtworksType>({
     queryKey: ['artworks', query, page],

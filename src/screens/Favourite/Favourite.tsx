@@ -115,7 +115,6 @@ const Favourite = ({ navigation }: FavouriteProps) => {
               openModal();
             }}
             getDetails={() => {
-              console.log(item.id);
               navigation.navigate(StackRoutes.ArtworkDetails, {
                 id: item.id,
               });

@@ -76,7 +76,6 @@ const ArtistDetails = ({ navigation, route }: ArtistDetailsProps) => {
     );
     const artworkData = (await response.json()) as ArtworksType;
     const ids = artworkData.data.map((artwork: ArtworkType) => artwork.id);
-    console.log('ids', ids);
     const artworksResponse = await fetch(
       `https://api.artic.edu/api/v1/artworks?page=${page}&limit=20&ids=${ids.join(
         ',',
