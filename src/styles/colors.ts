@@ -3,3 +3,4 @@ export const WHITE = '#FFFFFF';
 export const BLACK = '#000000';
 export const RED = '#FF0000';
 export const GREY = '#545454';
+export const GAINSBORO = '#DCDCDC';
