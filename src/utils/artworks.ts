@@ -18,7 +18,6 @@ export const getSavedArtworks = async () => {
 };
 
 export const saveArtwork = async (artwork: ArtworkType) => {
-  console.log('artwork', artwork);
   const savedArtworks = await getSavedArtworks();
   const newSavedArtworks = [...savedArtworks, artwork];
   await AsyncStorage.setItem('savedArtworks', JSON.stringify(newSavedArtworks));
@@ -26,10 +25,8 @@ export const saveArtwork = async (artwork: ArtworkType) => {
 
 export const removeArtwork = async (artwork: ArtworkType) => {
   const savedArtworks = await getSavedArtworks();
-  console.log('savedArtworks', savedArtworks);
   const newSavedArtworks = savedArtworks.filter(
     savedArtwork => savedArtwork.id !== artwork.id,
   );
-  console.log('newSavedArtworks', newSavedArtworks);
   await AsyncStorage.setItem('savedArtworks', JSON.stringify(newSavedArtworks));
 };
