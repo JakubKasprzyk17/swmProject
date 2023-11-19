@@ -1,0 +1,21 @@
+{
+  "defaultErrorHeader": "Coś poszło nie tak",
+  "defaultErrorBody": "Spróbuj ponownie poźniej.",
+  "internetErrorHeader": "Brak połączenia z internetem",
+  "internetErrorBody": "Sprawdź połączenie z internetem i spróbuj ponownie.",
+  "artist": "Artysta",
+  "title": "Tytuł",
+  "place": "Miejsce",
+  "date": "Data",
+  "medium": "Medium",
+  "dimensions": "Wymiary",
+  "creditLine": "Źródło",
+  "referenceNumber": "Numer referencyjny",
+  "dateOfBirth": "Data urodzenia",
+  "dateOfDeath": "Data śmierci",
+  "uknown": "Nieznane",
+  "map": "Mapa",
+  "placeholder": "Wyszukaj",
+  "noDataHeader": "Brak wyników",
+  "noDataBody": "Nie znaleziono żadnych wyników dla podanych kryteriów wyszukiwania."
+}
