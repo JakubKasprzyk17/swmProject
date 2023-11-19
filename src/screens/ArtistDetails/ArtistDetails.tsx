@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -18,7 +19,13 @@ import {
 } from '_types';
 import React, { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import {
+  ActivityIndicator,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import MapView, { Marker } from 'react-native-maps';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -110,6 +117,11 @@ const ArtistDetails = ({ navigation, route }: ArtistDetailsProps) => {
   return (
     <SafeAreaView style={s.container}>
       <View style={s.info}>
+        <TouchableOpacity
+          style={s.iconContainer}
+          onPress={() => navigation.goBack()}>
+          <Ionicons name="arrow-back" size={25} color={Colors.BLACK} />
+        </TouchableOpacity>
         <Text style={s.title}>{data?.data.title}</Text>
         <Text style={s.date}>
           {t('dateOfBirth') + ' ' + data?.data.birth_date}
@@ -188,9 +200,25 @@ const s = StyleSheet.create({
   container: {
     flex: 1,
   },
+  iconContainer: {
+    position: 'absolute',
+    top: 15,
+    left: 15,
+    width: 30,
+    height: 30,
+    zIndex: 1,
+    backgroundColor: Colors.WHITE,
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   info: {
+    backgroundColor: Colors.WHITE,
+    alignItems: 'flex-end',
     paddingHorizontal: 20,
     paddingVertical: 10,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
   title: {
     fontSize: Typography.FONT_SIZE_20,
