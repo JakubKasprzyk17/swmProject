@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-interface ArtworkType {
+export interface ArtworkType {
   id: number;
   imageId: string;
   title: string;
