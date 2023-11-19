@@ -1,3 +1,4 @@
+export { default as ArtistDetails } from './ArtistDetails/ArtistDetails';
 export { default as ArtworkDetails } from './ArtworkDetails/ArtworkDetails';
 export { default as Explore } from './Explore/Explore';
 export { default as Favourite } from './Favourite/Favourite';
