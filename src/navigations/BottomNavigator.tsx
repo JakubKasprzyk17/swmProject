@@ -1,6 +1,6 @@
 import { AntDesign, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Explore } from '_screens';
+import { Explore, Favourite, Search } from '_screens';
 import { Colors } from '_styles';
 import { BottomNavigatorParamsList, BottomRoutes } from '_types';
 import React from 'react';
@@ -30,7 +30,7 @@ const BottomNavigator = () => {
       />
       <Tab.Screen
         name={BottomRoutes.Search}
-        component={() => <></>}
+        component={Search}
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesome
@@ -43,7 +43,7 @@ const BottomNavigator = () => {
       />
       <Tab.Screen
         name={BottomRoutes.Favourite}
-        component={() => <></>}
+        component={Favourite}
         options={{
           tabBarIcon: ({ focused }) => (
             <AntDesign
