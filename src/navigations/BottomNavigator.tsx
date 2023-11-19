@@ -1,6 +1,6 @@
 import { AntDesign, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { Explore } from '_screens';
 import { Colors } from '_styles';
 import { BottomNavigatorParamsList, BottomRoutes } from '_types';
 import React from 'react';
@@ -17,7 +17,7 @@ const BottomNavigator = () => {
       }}>
       <Tab.Screen
         name={BottomRoutes.Explore}
-        component={() => <></>}
+        component={Explore}
         options={{
           tabBarIcon: ({ focused }) => (
             <MaterialIcons

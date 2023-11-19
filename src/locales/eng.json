@@ -1,0 +1,21 @@
+{
+  "defaultErrorHeader": "Something went wrong",
+  "defaultErrorText": "Please try again later",
+  "internetErrorHeader": "No internet connection",
+  "internetErrorBody": "Please check your internet connection and try again",
+  "artist": "Artist",
+  "title": "Title",
+  "place": "Place",
+  "date": "Date",
+  "medium": "Medium",
+  "dimensions": "Dimensions",
+  "creditLine": "Credit line",
+  "referenceNumber": "Reference number",
+  "dateOfBirth": "Date of birth",
+  "dateOfDeath": "Date of death",
+  "unknown": "Unknown",
+  "map": "Map",
+  "placeholder": "Search",
+  "noDataHeader": "No data",
+  "noDataBody:": "No data available for this category"
+}
