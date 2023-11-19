@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "packagejson",
+        "root": ["./src"],
+        "extensions": [".tsx", ".ts"],
+        "alias": {
+          "_components": "./src/components",
+          "_locales": "./src/locales",
+          "_navigations": "./src/navigations",
+          "_screens": "./src/screens",
+          "_styles": "./src/styles",
+          "_types": "./src/types",
+          "_utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}
