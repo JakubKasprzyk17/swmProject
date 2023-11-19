@@ -32,6 +32,12 @@ Or scan QR code using expo go app.
 ## Step 3: ENJOY 🎉
 
 
+## Features 
+
+- Like posts like on Instagram
+- Save the best posts to local storage
+- Zoom img to see more
+
 ## Used Technologies
 
 - React Native
